@@ -1,7 +1,6 @@
 package com.sistema.fyda.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -23,10 +21,10 @@ public class Usuario implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="data_cadastro") 
-	LocalDate dataCadastro;
+	String dataCadastro;
 	
 	@Column(name="senha") 
 	String senha;
@@ -37,12 +35,12 @@ public class Usuario implements Serializable {
 	@Column(name="token") 
 	String token;
 	
-	@ManyToOne
+	
 	@JoinColumn(name="cpf") 
-	Pessoa cpf;
+	String cpf;
 	
 	@Column(name="cod_usuario") 
-	TipoUsuario codUsuario;
+	String codUsuario;
 
 
 	public String getSenha() {
@@ -69,41 +67,39 @@ public class Usuario implements Serializable {
 		this.token = token;
 	}
 
-	public Pessoa getCpf() {
-		return cpf;
-	}
+	
 
-	public void setCpf(Pessoa cpf) {
-		this.cpf = cpf;
-	}
-
-	public int getCodigo() {
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
-	public LocalDate getDataCadastro() {
+	public String getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(LocalDate dataCadastro) {
+	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
-	public TipoUsuario getCodUsuario() {
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getCodUsuario() {
 		return codUsuario;
 	}
 
-	public void setCodUsuario(TipoUsuario codUsuario) {
+	public void setCodUsuario(String codUsuario) {
 		this.codUsuario = codUsuario;
 	}
 
 	
-
-	
-	
-
 }

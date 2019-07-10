@@ -20,16 +20,17 @@ public class TipoDispositivo implements Serializable  {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="descricao") 
 	String descricao;
 
-	public int getCodigo() {
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 

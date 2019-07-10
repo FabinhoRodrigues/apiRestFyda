@@ -20,22 +20,24 @@ public class Comodo implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="area")
 	int area;
 	
 	@Column(name="categoria")
-	TipoComodo categoria;
+	String categoria;
 	
 	@Column(name="residencia")
-	Residencia residencia;
+	String residencia;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -47,21 +49,23 @@ public class Comodo implements Serializable{
 		this.area = area;
 	}
 
-	public TipoComodo getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(TipoComodo categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 
-	public Residencia getResidencia() {
+	public String getResidencia() {
 		return residencia;
 	}
 
-	public void setResidencia(Residencia residencia) {
+	public void setResidencia(String residencia) {
 		this.residencia = residencia;
 	}
+
+	
 	
 	
 	

@@ -1,12 +1,7 @@
 package com.sistema.fyda.config;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.wordnik.swagger.models.Contact;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;

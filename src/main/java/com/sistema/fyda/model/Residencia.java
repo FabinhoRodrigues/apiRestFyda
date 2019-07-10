@@ -20,19 +20,21 @@ public class Residencia implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="numero_comodos")
 	int numeroComodo;
 	
 	@Column(name="usuario")
-	Usuario usuario;
+	String usuario;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -44,13 +46,15 @@ public class Residencia implements Serializable {
 		this.numeroComodo = numeroComodo;
 	}
 
-	public Usuario getUsuario() {
+	public String getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
+	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
+
+	
 	
 	
 

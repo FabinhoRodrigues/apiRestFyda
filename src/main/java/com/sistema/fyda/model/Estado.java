@@ -20,7 +20,7 @@ public class Estado  implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="nome")
 	String nome;
@@ -29,13 +29,15 @@ public class Estado  implements Serializable {
 	String sigla;
 	
 	@Column(name="cod_pais")
-	Pais codPais;
+	String codPais;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -55,13 +57,15 @@ public class Estado  implements Serializable {
 		this.sigla = sigla;
 	}
 
-	public Pais getCodPais() {
+	public String getCodPais() {
 		return codPais;
 	}
 
-	public void setCodPais(Pais codPais) {
+	public void setCodPais(String codPais) {
 		this.codPais = codPais;
 	}
+
+	
 	
 	
 	

@@ -1,7 +1,6 @@
 package com.sistema.fyda.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,19 +19,21 @@ public class DumpUpdate implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	String log;
 	
-	LocalDate dataInsercao;
+	String dataInsercao;
 	
-	EquipamentoSensorial equipamento;
+	String equipamento;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -44,21 +45,22 @@ public class DumpUpdate implements Serializable{
 		this.log = log;
 	}
 
-	public LocalDate getDataInsercao() {
+	public String getDataInsercao() {
 		return dataInsercao;
 	}
 
-	public void setDataInsercao(LocalDate dataInsercao) {
+	public void setDataInsercao(String dataInsercao) {
 		this.dataInsercao = dataInsercao;
 	}
 
-	public EquipamentoSensorial getEquipamento() {
+	public String getEquipamento() {
 		return equipamento;
 	}
 
-	public void setEquipamento(EquipamentoSensorial equipamento) {
+	public void setEquipamento(String equipamento) {
 		this.equipamento = equipamento;
 	}
+
 	
 	
 

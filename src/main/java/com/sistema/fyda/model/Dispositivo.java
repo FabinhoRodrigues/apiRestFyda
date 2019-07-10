@@ -1,7 +1,6 @@
 package com.sistema.fyda.model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +20,7 @@ public class Dispositivo implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="consumo")
 	int consumo;
@@ -33,19 +32,21 @@ public class Dispositivo implements Serializable{
 	int potencia;
 	
 	@Column(name="data_cadastro")
-	LocalDate dataCadastro;
+	String dataCadastro;
 	
 	@Column(name="categoria")
-	TipoDispositivo categoria;
+	String categoria;
 	
 	@Column(name="comodo")
-	TipoComodo comodo;
+	String comodo;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -73,30 +74,30 @@ public class Dispositivo implements Serializable{
 		this.potencia = potencia;
 	}
 
-	public LocalDate getDataCadastro() {
+	public String getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(LocalDate dataCadastro) {
+	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
-	public TipoDispositivo getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(TipoDispositivo categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 
-	public TipoComodo getComodo() {
+	public String getComodo() {
 		return comodo;
 	}
 
-	public void setComodo(TipoComodo comodo) {
+	public void setComodo(String comodo) {
 		this.comodo = comodo;
 	}
-	
+
 	
 	
 }

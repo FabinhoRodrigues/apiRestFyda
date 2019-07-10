@@ -21,40 +21,43 @@ public class EquipamentoSensorial  implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="num_serie")
-	int numSerie;
+	Long numSerie;
 	
 	@Column(name="dispositivo")
-	Dispositivo dispositivo;
+	String dispositivo;
 	
 	@Column(name="categoria_equipamento")
-	TipoEquipamento categoria;
+	String categoria;
 	
 
-	
 
-	public int getNumSerie() {
+	public Long getNumSerie() {
 		return numSerie;
 	}
 
-	public void setNumSerie(int numSerie) {
+	public void setNumSerie(Long numSerie) {
 		this.numSerie = numSerie;
 	}
 
-	public Dispositivo getDispositivo() {
+
+
+	public String getDispositivo() {
 		return dispositivo;
 	}
 
-	public void setDispositivo(Dispositivo dispositivo) {
-		this.dispositivo = dispositivo;
-	}
-
-	public TipoEquipamento getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(TipoEquipamento categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+
+	public void setDispositivo(String dispositivo) {
+		this.dispositivo = dispositivo;
+	}
+
+	
 	
 	
 	

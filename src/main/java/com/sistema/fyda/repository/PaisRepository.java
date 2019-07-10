@@ -6,5 +6,5 @@ import com.sistema.fyda.model.Pais;
 
 public interface PaisRepository extends JpaRepository<Pais, Long>{
 	
-
+	
 }

@@ -20,7 +20,7 @@ public class Pessoa implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	int codigo;
+	Long codigo;
 	
 	@Column(name="nome")
 	String nome;
@@ -35,13 +35,15 @@ public class Pessoa implements Serializable{
 	String endereco;
 	
 	@Column(name="cidade")
-	Cidade cidade;
+	String cidade;
 
-	public int getCodigo() {
+	
+
+	public Long getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Long codigo) {
 		this.codigo = codigo;
 	}
 
@@ -77,14 +79,14 @@ public class Pessoa implements Serializable{
 		this.endereco = endereco;
 	}
 
-	public Cidade getCidade() {
+	public String getCidade() {
 		return cidade;
 	}
 
-	public void setCidade(Cidade cidade) {
+	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
-	
+
 	
 
 }
